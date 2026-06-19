@@ -1,3 +1,15 @@
+# Project-specific: data & models (large, regenerable, don't commit) ---
+data/raw/
+data/processed/
+models/
+*.pkl
+*.joblib
+*.h5
+
+# Keep empty data/ and models/ folders visible on GitHub
+!data/.gitkeep
+!models/.gitkeep
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
