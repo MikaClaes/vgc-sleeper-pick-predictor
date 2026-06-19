@@ -1,15 +1,3 @@
-# Project-specific: data & models (large, regenerable, don't commit) ---
-data/raw/
-data/processed/
-models/
-*.pkl
-*.joblib
-*.h5
-
-# Keep empty data/ and models/ folders visible on GitHub
-!data/.gitkeep
-!models/.gitkeep
-
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
@@ -228,3 +216,22 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# ----------------------------------------------------------------------
+# Project-specific
+# ----------------------------------------------------------------------
+
+# Data: ignore contents (large, regenerable) but keep folders tracked
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Models: ignore saved model files but keep the folder tracked
+models/*
+!models/.gitkeep
+
+# Catch serialized models/datasets anywhere
+*.pkl
+*.joblib
+*.h5
